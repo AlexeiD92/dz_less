@@ -1,0 +1,83 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+.border {
+  border: solid 3px black;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.size_text_block {
+  width: 200px;
+  height: 50px;
+}
+body {
+  .flex();
+}
+.wrap {
+  width: 900px;
+  height: 600px;
+  .border();
+  .flex();
+  @media (max-width: 800px){
+    .block {
+      width: 500px;
+      height: 150px;
+      .border();
+      flex-wrap: wrap;
+    }
+    .yellow_block {
+      width: 435px;
+    }
+  }
+  @media (max-width: 600px){
+    .block {
+      width: 500px;
+      height: 300px;
+      .border();
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+    }
+    .red_block {
+      width: 435px;
+      height: 100px;
+    }
+    .orange_block {
+      width: 435px;
+      height: 100px;
+    }
+  }
+}
+.block {
+  width: 800px;
+  height: 100px;
+  .border();
+  .flex();
+  justify-content: space-evenly;
+}
+.red_block {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  .size_text_block();
+  .border();
+}
+.orange_block {
+  background-color: orange;
+  .size_text_block();
+  .border();
+  .flex();
+}
+.yellow_block {
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  .size_text_block();
+  .border();
+}
